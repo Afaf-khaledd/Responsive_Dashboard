@@ -12,9 +12,9 @@ class AllExpensesItemHeader extends StatelessWidget {
     return Row(
       children: [
         CircleAvatar(
-          radius: 40,
+          radius: 30,
           backgroundColor: imageBackgroundColor ?? Color(0xFFFAFAFA),
-          child: SvgPicture.asset(image, width: 43,colorFilter: ColorFilter.mode(imageColor ?? Color(0xFF4EB7F2), BlendMode.srcIn),),
+          child: SvgPicture.asset(image,colorFilter: ColorFilter.mode(imageColor ?? Color(0xFF4EB7F2), BlendMode.srcIn),),
         ),
         Spacer(),
         Transform.rotate(

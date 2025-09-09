@@ -27,7 +27,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(image: itemModel.image,),
-          SizedBox(height: 34,),
+          SizedBox(height: 20,),
           Text(itemModel.title,style: AppStyles.styleSemiBold16,),
           SizedBox(height: 8,),
           Text(itemModel.date, style: AppStyles.styleRegular14,),
@@ -60,7 +60,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(image: itemModel.image,imageBackgroundColor: Color.fromRGBO(255, 255, 255, 0.1), imageColor: Colors.white,),
-          SizedBox(height: 34,),
+          SizedBox(height: 20,),
           Text(itemModel.title,style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),),
           SizedBox(height: 8,),
           Text(itemModel.date, style: AppStyles.styleRegular14.copyWith(color: Color(0xFFFAFAFA)),),
