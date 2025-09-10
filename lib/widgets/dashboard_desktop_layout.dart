@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/all_expenses.dart';
+import 'package:responsive_dashboard/widgets/my_card_and_transaction_history.dart';
 import 'package:responsive_dashboard/widgets/quick_invoice.dart';
-
 import 'custom_drawer.dart';
-import 'my_card_section.dart';
+import 'income_section.dart';
+
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -27,7 +28,14 @@ class DashboardDesktopLayout extends StatelessWidget {
                       ),
             )),
         SizedBox(width: 24,),
-        Expanded(child: MyCardSection()),
+        Expanded(child: Column(
+          children: [
+            SizedBox(height: 40),
+            MyCardAndTransactionHistory(),
+            SizedBox(height: 24,),
+            Expanded(child: IncomeSection()),
+          ],
+        )),
       ],
     );
   }

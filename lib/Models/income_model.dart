@@ -1,0 +1,10 @@
+import 'package:flutter/material.dart';
+
+class IncomeModel {
+  final String title;
+  final String percentage;
+  final Color color;
+
+  const IncomeModel({required this.title, required this.percentage, required this.color});
+
+}
