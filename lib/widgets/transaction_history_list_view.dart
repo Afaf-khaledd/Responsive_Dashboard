@@ -12,11 +12,16 @@ class TransactionHistoryListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: items.map((e) => TransactionHistoryItem(transactionHistoryModel: e,)).toList(),
+    );
+    /*
+    // makes error because of ShrinkWrap
     return ListView.separated(
         itemCount: items.length,
         shrinkWrap: true,
         itemBuilder: (context, index){
           return TransactionHistoryItem(transactionHistoryModel: items[index],);
-    }, separatorBuilder: (context, index) => const SizedBox(height: 12));
+    }, separatorBuilder: (context, index) => const SizedBox(height: 12));*/
   }
 }

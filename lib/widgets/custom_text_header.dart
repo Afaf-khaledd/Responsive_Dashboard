@@ -8,6 +8,6 @@ class CustomTextHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(title, style: AppStyles.styleMedium16,);
+    return Text(title, style: AppStyles.styleMedium16(context),);
   }
 }

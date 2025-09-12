@@ -10,13 +10,15 @@ class AllExpensesItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: imageBackgroundColor ?? Color(0xFFFAFAFA),
-          child: SvgPicture.asset(image,colorFilter: ColorFilter.mode(imageColor ?? Color(0xFF4EB7F2), BlendMode.srcIn),),
+        Flexible(
+          child: CircleAvatar( // aspectRatio: 1, constrainedBox with maxWidth 60, container, center for image
+            radius: 30,
+            backgroundColor: imageBackgroundColor ?? Color(0xFFFAFAFA),
+            child: SvgPicture.asset(image,colorFilter: ColorFilter.mode(imageColor ?? Color(0xFF4EB7F2), BlendMode.srcIn),),
+          ),
         ),
-        Spacer(),
         Transform.rotate(
           angle: -1.57079633 * 2,
           child: Icon(Icons.arrow_back_ios_outlined, color: imageColor == null ? Color(0xFF064061) : Colors.white),

@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
           elevation: 0,
           backgroundColor: backgroundColor?? Colors.transparent,
         ),
-          child: Text(text,style: AppStyles.styleSemiBold18.copyWith(color: backgroundColor != null ? Colors.white : Color(0xFF4EB7F2)),),
+          child: Text(text,style: AppStyles.styleSemiBold18(context).copyWith(color: backgroundColor != null ? Colors.white : Color(0xFF4EB7F2)),),
       ),
     );
   }
